@@ -158,10 +158,6 @@ class User extends ActiveRecord implements \yii\web\IdentityInterface
             return self::ROLE_SYSTEM;
         }
 
-        if ($this->hasProperty('created_by') && $this->created_by === $this->created_by) {
-            return self::ROLE_OWNER;
-        }
-
-        return self::ROLE_USER;
+        return self::ROLE_OWNER;
     }
 }

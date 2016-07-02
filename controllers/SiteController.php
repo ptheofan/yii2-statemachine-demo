@@ -2,6 +2,7 @@
 
 namespace app\controllers;
 
+use app\components\Messages;
 use app\models\User;
 use Yii;
 use yii\filters\AccessControl;
@@ -50,21 +51,42 @@ class SiteController extends Controller
 
     public function actionIndex()
     {
-//        $tx = User::getDb()->beginTransaction();
-//        $user = new User();
-//        $user->email = 'test@example.com';
-//        $user->setPassword('123');
-//        $user->save();
-//        $tx->commit();
+        $user = User::find()->andWhere(['email' => 'test@example.com'])->one();
+        if (!$user) {
+            $tx = User::getDb()->beginTransaction();
+            $user = new User();
+            $user->email = 'test@example.com';
+            $user->setPassword('123');
+            $user->save();
+            $tx->commit();
+        }
 
-//        $tx = User::getDb()->beginTransaction();
-//        /** @var User $user */
-//        $user = User::find()->andWhere(['email' => 'test@example.com'])->one();
-//        $user->status = 'verified';
-//        $tx->commit();
-//        die;
+        $asRole = Yii::$app->getRequest()->getQueryParam('role', 'guest');
 
-        return $this->render('index');
+        return $this->render('index', [
+            'user' => $user,
+            'role' => $asRole,
+            'sm' => Yii::$app->smUserAccountStatus,
+            'messages' => Messages::get(),
+        ]);
+    }
+
+    public function actionTrigger()
+    {
+        $asRole = Yii::$app->getRequest()->getQueryParam('role', 'guest');
+        $trigger = Yii::$app->getRequest()->getQueryParam('event');
+        $tx = User::getDb()->beginTransaction();
+        /** @var User $user */
+        $user = User::find()->andWhere(['email' => 'test@example.com'])->one();
+        $context = $user->status->trigger($trigger, $asRole);
+        $tx->commit();
+
+        return $this->render('index', [
+            'user' => $user,
+            'role' => $asRole,
+            'sm' => Yii::$app->smUserAccountStatus,
+            'messages' => Messages::get(),
+        ]);
     }
 
     public function actionLogin()

@@ -352,21 +352,61 @@
             "time": "2015-08-05 01:03:42"
         },
         {
+            "name": "ptheofan/yii2-behaviors",
+            "version": "v1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ptheofan/yii2-behaviors.git",
+                "reference": "2948c01bfc5db0e47acdb74f2bfc56e4a322cffe"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ptheofan/yii2-behaviors/zipball/2948c01bfc5db0e47acdb74f2bfc56e4a322cffe",
+                "reference": "2948c01bfc5db0e47acdb74f2bfc56e4a322cffe",
+                "shasum": ""
+            },
+            "require": {
+                "yiisoft/yii2": ">=2"
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "ptheofan\\behaviors\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Paris Theofanidis",
+                    "email": "ptheofan@gmail.com"
+                }
+            ],
+            "description": "A collection of commonly used behaviors classes.",
+            "keywords": [
+                "behaviors",
+                "yii2"
+            ],
+            "time": "2016-07-02 22:55:42"
+        },
+        {
             "name": "ptheofan/yii2-helpers",
             "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ptheofan/yii2-helpers.git",
-                "reference": "3faa03cffe78c13bef85a247d8a7f0f3811d6e51"
+                "reference": "374810577245573738be2a444118ce44643fc711"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ptheofan/yii2-helpers/zipball/3faa03cffe78c13bef85a247d8a7f0f3811d6e51",
-                "reference": "3faa03cffe78c13bef85a247d8a7f0f3811d6e51",
+                "url": "https://api.github.com/repos/ptheofan/yii2-helpers/zipball/374810577245573738be2a444118ce44643fc711",
+                "reference": "374810577245573738be2a444118ce44643fc711",
                 "shasum": ""
             },
             "require": {
-                "yiisoft/yii2": "*"
+                "yiisoft/yii2": ">=2"
             },
             "type": "yii2-extension",
             "autoload": {
@@ -391,7 +431,7 @@
                 "utilities",
                 "yii2"
             ],
-            "time": "2016-07-02 09:58:49"
+            "time": "2016-07-02 22:54:35"
         },
         {
             "name": "ptheofan/yii2-statemachine",
@@ -399,17 +439,17 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ptheofan/yii2-statemachine.git",
-                "reference": "9a4cd90471fccbb190984a5ea3c977df13c22ae4"
+                "reference": "25f72c5725f833392d0b38458cf5b6fa9de15c68"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ptheofan/yii2-statemachine/zipball/9a4cd90471fccbb190984a5ea3c977df13c22ae4",
-                "reference": "9a4cd90471fccbb190984a5ea3c977df13c22ae4",
+                "url": "https://api.github.com/repos/ptheofan/yii2-statemachine/zipball/25f72c5725f833392d0b38458cf5b6fa9de15c68",
+                "reference": "25f72c5725f833392d0b38458cf5b6fa9de15c68",
                 "shasum": ""
             },
             "require": {
-                "alom/graphviz": "dev-hackhtmllabels",
-                "yiisoft/yii2": ">=2.0.4"
+                "ptheofan/yii2-behaviors": ">=1",
+                "yiisoft/yii2": ">=2"
             },
             "type": "yii2-extension",
             "autoload": {
@@ -434,7 +474,7 @@
                 "timeout",
                 "yii2"
             ],
-            "time": "2016-07-01 17:01:20"
+            "time": "2016-07-02 23:12:22"
         },
         {
             "name": "swiftmailer/swiftmailer",

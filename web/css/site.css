@@ -89,3 +89,16 @@ a.desc:after {
     padding: 10px 20px;
     margin: 0 0 15px 0;
 }
+
+.dropdrown-as-textinline > .btn,
+.dropdrown-as-textinline > .btn:active, .btn.active {
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    margin-top: -2px;
+    box-shadow: none;
+}
+
+.dropdrown-as-textinline.btn-group.open .dropdown-toggle {
+    box-shadow: none;
+}
