@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "5518e72193d4d3c5b87c13af3d2e079d",
-    "content-hash": "2088c72943820e26df45882d7e077a55",
+    "hash": "f5d6cc5779aa6191d7a5a25a58787b4b",
+    "content-hash": "4e2b0623818f46ff05889ad02781c136",
     "packages": [
         {
             "name": "alom/graphviz",
@@ -352,6 +352,47 @@
             "time": "2015-08-05 01:03:42"
         },
         {
+            "name": "giovdk21/yii2-syntaxhighlighter",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/giovdk21/yii2-syntaxhighlighter.git",
+                "reference": "9407b70cb2f53ca051efc54c30b1b255721b80bb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/giovdk21/yii2-syntaxhighlighter/zipball/9407b70cb2f53ca051efc54c30b1b255721b80bb",
+                "reference": "9407b70cb2f53ca051efc54c30b1b255721b80bb",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0",
+                "yiisoft/yii2": "*"
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "giovdk21\\yii2SyntaxHighlighter\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT License"
+            ],
+            "authors": [
+                {
+                    "name": "Giovanni Derks",
+                    "homepage": "http://derks.me.uk/"
+                }
+            ],
+            "description": "Syntax Highlighter for Yii 2",
+            "keywords": [
+                "SyntaxHighlighter",
+                "yii2"
+            ],
+            "time": "2014-11-02 18:53:38"
+        },
+        {
             "name": "ptheofan/yii2-behaviors",
             "version": "v1.0",
             "source": {
@@ -439,12 +480,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ptheofan/yii2-statemachine.git",
-                "reference": "d66b24e5ee52241b1c3398c97cfd3d1957108d76"
+                "reference": "5a8ae04ea611d7c5351b0511ffce287dfcb33f81"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ptheofan/yii2-statemachine/zipball/d66b24e5ee52241b1c3398c97cfd3d1957108d76",
-                "reference": "d66b24e5ee52241b1c3398c97cfd3d1957108d76",
+                "url": "https://api.github.com/repos/ptheofan/yii2-statemachine/zipball/5a8ae04ea611d7c5351b0511ffce287dfcb33f81",
+                "reference": "5a8ae04ea611d7c5351b0511ffce287dfcb33f81",
                 "shasum": ""
             },
             "require": {
@@ -474,7 +515,7 @@
                 "timeout",
                 "yii2"
             ],
-            "time": "2016-07-02 23:44:49"
+            "time": "2016-07-03 00:13:23"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -1082,6 +1123,7 @@
     "minimum-stability": "stable",
     "stability-flags": {
         "alom/graphviz": 20,
+        "giovdk21/yii2-syntaxhighlighter": 20,
         "ptheofan/yii2-statemachine": 20,
         "ptheofan/yii2-helpers": 20
     },

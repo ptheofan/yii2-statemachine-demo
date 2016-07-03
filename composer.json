@@ -25,6 +25,7 @@
         "yiisoft/yii2-bootstrap": "*",
         "yiisoft/yii2-swiftmailer": "*",
         "alom/graphviz": "dev-hackhtmllabels",
+        "giovdk21/yii2-syntaxhighlighter": "dev-master",
         "ptheofan/yii2-statemachine": "dev-master",
         "ptheofan/yii2-helpers": "dev-master"
     },

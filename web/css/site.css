@@ -104,6 +104,20 @@ a.desc:after {
     box-shadow: none;
 }
 
+.row-section:first-child {
+    margin-top: 0;
+}
+.row-section {
+    margin-top: 30px;
+}
+.text-info {
+    color: #ababab;
+}
+.head-info {
+    padding: 4px;
+    background-color: #f9f9f9;
+}
+
 .console {
     background-color: black;
     min-height: 200px;
