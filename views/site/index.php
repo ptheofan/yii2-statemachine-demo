@@ -31,7 +31,7 @@ $this->title = 'Yii2-StateMachine example';
     <div class="col-md-6">
         <p id="sm">State Machine - <?= $sm->name; ?></p>
         <div id="dot-graph">
-            <?= SystemHelper::call('/usr/local/bin/dot', ['-Tsvg'], $graphViz->render($sm), $exitCode); ?>
+            <?= SystemHelper::call(Yii::$app->params['graphviz']['binary'], Yii::$app->params['graphviz']['args'], $graphViz->render($sm), $exitCode); ?>
         </div>
     </div>
     <div class="col-md-6">
