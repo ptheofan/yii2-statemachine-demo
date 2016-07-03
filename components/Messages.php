@@ -13,21 +13,34 @@ namespace app\components;
  */
 class Messages
 {
+    const TYPE_DEFAULT = 0;
+    const TYPE_ERROR = 1;
+
     /**
-     * @var array
+     * @var Message[]
      */
     private static $messages = [];
 
     /**
-     * @param $message
+     * @param string|array $messages
+     * @param int $type
+     * @param bool $indentChildren
      */
-    public static function add($message)
+    public static function add($messages, $type = self::TYPE_DEFAULT, $indentChildren = true)
     {
-        static::$messages[] = $message;
+        if (!is_array($messages)) {
+            $messages = [$messages];
+        }
+
+        $i = 0;
+        foreach ($messages as $message) {
+            static::$messages[] = new Message($message, $type, $indentChildren && $i > 0);
+            $i++;
+        }
     }
 
     /**
-     * @return array
+     * @return Message[]
      */
     public static function get()
     {

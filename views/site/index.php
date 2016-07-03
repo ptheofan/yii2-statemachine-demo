@@ -1,7 +1,7 @@
 <?php
 
 /** @var yii\web\View $this */
-/** @var array $messages */
+/** @var \app\components\Message[] $messages */
 /** @var \ptheofan\statemachine\StateMachine $sm */
 /** @var \app\models\User $user */
 /** @var string $role */
@@ -42,7 +42,7 @@ $this->title = 'Yii2-StateMachine example';
         <ul class="list-inline">
             <?php foreach ($user->status->getTriggers($role) as $event) { ?>
             <li>
-                <?= \yii\bootstrap\Html::a($event->getLabel(), ['/site/trigger', 'event' => $event->getLabel(), 'role' => $role], [
+                <?= \yii\bootstrap\Html::a($event->getLabel(), ['/', 'event' => $event->getLabel(), 'role' => $role], [
                     'class' => 'btn btn-default',
                 ]); ?>
             </li>
@@ -51,10 +51,10 @@ $this->title = 'Yii2-StateMachine example';
 
         <div style="margin-top: 45px;">
             <p>Transition Log</p>
-            <div style="background-color: black; min-height: 200px; padding: 8px">
-                <?php foreach ($messages as $message) { ?>
-                    <div style="color: #00c600; font-size: 12px;"><?= $message; ?></div>
-                <?php }?>
+            <div class="console">
+                <?php foreach ($messages as $message) {
+                    echo $message->toHtml();
+                } ?>
             </div>
         </div>
     </div>

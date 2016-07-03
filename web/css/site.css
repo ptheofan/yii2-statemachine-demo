@@ -90,6 +90,7 @@ a.desc:after {
     margin: 0 0 15px 0;
 }
 
+/** STYLES FOR StateMachine Demo **/
 .dropdrown-as-textinline > .btn,
 .dropdrown-as-textinline > .btn:active, .btn.active {
     border: none;
@@ -101,4 +102,23 @@ a.desc:after {
 
 .dropdrown-as-textinline.btn-group.open .dropdown-toggle {
     box-shadow: none;
+}
+
+.console {
+    background-color: black;
+    min-height: 200px;
+    padding: 8px;
+    font-size: 12px;
+}
+
+.console > span {
+    display: block;
+}
+
+.console > .default {
+    color: #00f600;
+}
+
+.console > .error {
+    color: #ff8580;
 }

@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "359a9296074c7bc8c88d0998168c1025",
-    "content-hash": "19e5dc347addf70a6c10802658b881be",
+    "hash": "5518e72193d4d3c5b87c13af3d2e079d",
+    "content-hash": "2088c72943820e26df45882d7e077a55",
     "packages": [
         {
             "name": "alom/graphviz",
@@ -439,12 +439,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ptheofan/yii2-statemachine.git",
-                "reference": "25f72c5725f833392d0b38458cf5b6fa9de15c68"
+                "reference": "d66b24e5ee52241b1c3398c97cfd3d1957108d76"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ptheofan/yii2-statemachine/zipball/25f72c5725f833392d0b38458cf5b6fa9de15c68",
-                "reference": "25f72c5725f833392d0b38458cf5b6fa9de15c68",
+                "url": "https://api.github.com/repos/ptheofan/yii2-statemachine/zipball/d66b24e5ee52241b1c3398c97cfd3d1957108d76",
+                "reference": "d66b24e5ee52241b1c3398c97cfd3d1957108d76",
                 "shasum": ""
             },
             "require": {
@@ -474,7 +474,7 @@
                 "timeout",
                 "yii2"
             ],
-            "time": "2016-07-02 23:12:22"
+            "time": "2016-07-02 23:44:49"
         },
         {
             "name": "swiftmailer/swiftmailer",
