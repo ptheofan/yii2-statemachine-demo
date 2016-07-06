@@ -13,7 +13,7 @@ $graphViz = new \ptheofan\statemachine\GraphViz([
     'profile' => require(Yii::getAlias('@vendor/ptheofan/yii2-statemachine/profiles/default.php')),
 ]);
 
-$this->title = 'Yii2-StateMachine example';
+$this->title = 'Interactive Demo | Yii2-StateMachine';
 ?>
 <div class="head-info">
 <p>This is a demo for the <a href="https://github.com/ptheofan/yii2-statemachine">Yii2-StateMachine</a> extension.</p>
