@@ -6,12 +6,13 @@ do the following.
 
 1. Clone the project in some folder
 2. Create a database with name `statemachinedemo`
-3. Install the database schema
+3. run composer install `composer install` to get the dependencies
+4. Install the database schema
 ```bash
 ./yii migrate && ./yii migrate --migrationPath='@vendor/ptheofan/yii2-statemachine/migrations/'
 ```
-4. Configure your webserver to point to the `<projectfolder>/web` according to Yii2 documentation.
-5. Navigate to the project on your local and play around.
+5. Configure your webserver to point to the `<projectfolder>/web` according to Yii2 documentation.
+6. Navigate to the project on your local and play around.
 
 
 ## Yii2 StateMachine
