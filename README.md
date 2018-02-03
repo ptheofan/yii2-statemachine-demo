@@ -13,6 +13,7 @@ do the following.
 ```
 5. Configure your webserver to point to the `<projectfolder>/web` according to Yii2 documentation.
 6. Navigate to the project on your local and play around.
+7. Install graphviz (example for Ubuntu: sudo apt-get install graphviz)
 
 
 ## Yii2 StateMachine
