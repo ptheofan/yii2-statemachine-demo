@@ -1,5 +1,5 @@
 <?php
-
+Yii::setAlias('@root', dirname(__DIR__));
 $params = require(__DIR__ . '/params.php');
 
 $config = [
@@ -25,6 +25,7 @@ $config = [
             'class' => 'ptheofan\statemachine\StateMachine',
             'schemaSource' => '@vendor/ptheofan/yii2-statemachine/example-account.xml',
             'name' => 'account',
+            'commandsNamespace' => '\app\sm\commands',
         ],
         'mailer' => [
             'class' => 'yii\swiftmailer\Mailer',

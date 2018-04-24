@@ -26,8 +26,10 @@
         "yiisoft/yii2-swiftmailer": "*",
         "alom/graphviz": "dev-hackhtmllabels",
         "giovdk21/yii2-syntaxhighlighter": "dev-master",
+        "ptheofan/yii2-behaviors": "dev-master",
+        "ptheofan/yii2-helpers": "dev-master",
         "ptheofan/yii2-statemachine": "dev-master",
-        "ptheofan/yii2-helpers": "dev-master"
+        "tightenco/collect": "^5.5"
     },
     "require-dev": {
         "yiisoft/yii2-codeception": "*",
@@ -36,7 +38,13 @@
         "yiisoft/yii2-faker": "*"
     },
     "config": {
-        "process-timeout": 1800
+        "process-timeout": 1800,
+        "fxp-asset": {
+            "installer-paths":{
+                "npm-asset-library": "vendor/npm",
+                "bower-asset-library": "vendor/bower"
+            }
+        }
     },
     "scripts": {
         "post-create-project-cmd": [
@@ -55,10 +63,6 @@
             "generateCookieValidationKey": [
                 "config/web.php"
             ]
-        },
-        "asset-installer-paths": {
-            "npm-asset-library": "vendor/npm",
-            "bower-asset-library": "vendor/bower"
         }
     }
 }

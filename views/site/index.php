@@ -52,10 +52,11 @@ $this->title = 'Interactive Demo | Yii2-StateMachine';
             ]);
         ?></div>
         <ul class="list-inline">
-            <?php if (empty($user->status->getTriggers($role))) { ?>
+            <?php $triggers = $user->status->getTriggers($user); ?>
+            <?php if (empty($triggers)) { ?>
                 <p class="text-center text-info"><em>No events for <?= $role; ?> in state <?= $user->status; ?>. Try changing the role.</em></p>
             <?php } else {
-                foreach ($user->status->getTriggers($role) as $event) { ?>
+                foreach ($triggers as $event) { ?>
                     <li>
                         <?= \yii\bootstrap\Html::a($event->getLabel(),
                             ['/', 'event' => $event->getLabel(), 'role' => $role], [

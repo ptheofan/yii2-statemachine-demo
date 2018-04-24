@@ -35,14 +35,18 @@ class SiteController extends Controller
 
         $asRole = Yii::$app->getRequest()->getQueryParam('role', 'guest');
         $trigger = Yii::$app->getRequest()->getQueryParam('event');
-        $tx = User::getDb()->beginTransaction();
-        /** @var User $user */
-        $user = User::find()->andWhere(['email' => 'test@example.com'])->one();
-        try {
-            $context = $user->status->trigger($trigger, $asRole);
-        } catch (EventNotFoundException $e) {
-            Messages::add($e->getMessage(), Messages::TYPE_ERROR);
-        } finally {
+
+        if (!empty($trigger)) {
+            $tx = User::getDb()->beginTransaction();
+            /** @var User $user */
+            $user = User::find()->andWhere(['email' => 'test@example.com'])->one();
+            try {
+                $user->status->trigger($trigger, $user);
+                $user->save();
+            } catch (EventNotFoundException $e) {
+                Messages::add($e->getMessage(), Messages::TYPE_ERROR);
+            }
+
             if (!$user->hasErrors()) {
                 $tx->commit();
             } else {
@@ -51,8 +55,6 @@ class SiteController extends Controller
                 }
             }
         }
-
-        $asRole = Yii::$app->getRequest()->getQueryParam('role', 'guest');
 
         return $this->render('index', [
             'user' => $user,

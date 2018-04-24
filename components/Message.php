@@ -6,7 +6,6 @@
  */
 namespace app\components;
 
-use yii\base\Object;
 use yii\bootstrap\Html;
 
 /**

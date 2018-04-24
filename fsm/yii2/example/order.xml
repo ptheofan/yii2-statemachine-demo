@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<state-machines>
+
+    <!--
+        Checkout process of a website
+    -->
+    <state-machine name="checkout" initialState="sale">
+        <state value="sale">
+            <transition value="paid" target="paid"/>
+            <transition value="canceled" target="canceled"/>
+        </state>
+        <state value="paid">
+            <enter>
+                <command class="VerifyCapturedFunds"/>
+            </enter>
+        </state>
+        <state value="canceled"/>
+    </state-machine>
+
+    <!--
+      Online Payment Process
+    -->
+    <state-machine name="online_payment" initialState="draft">
+        <state value="draft">
+            <transition value="verify" target="verifying"/>
+        </state>
+        <state value="authorized">
+            <enter>
+                <command class="AuthorizeOnlinePayment"/>
+            </enter>
+            <transition value="cancel"/>
+        </state>
+        <state value="captured">
+            <enter>
+                <command class="CaptureOnlinePayment"/>
+            </enter>
+            <transition value="refund" target="refunded"/>
+        </state>
+        <state value="refunded">
+            <enter>
+                <command class="RefundOnlinePayment"/>
+            </enter>
+        </state>
+        <state value="canceled">
+            <enter>
+                <command class="CancelAuthorization"/>
+            </enter>
+        </state>
+    </state-machine>
+
+    <!--
+        Bank Transfer
+    -->
+    <state-machine name="bank_transfer" initialState="draft">
+        <state value="draft">
+            <transition value="verifying"/>
+        </state>
+        <state value="verified">
+
+        </state>
+        <state value="canceled">
+
+        </state>
+    </state-machine>
+</state-machines>

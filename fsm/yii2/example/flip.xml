@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<state-machine name="flip" initialState="off">
+    <state value="on" name="on">
+        <enter>
+            <command class="app\fsm\yii2\example\commands\Max" limit="1"/>
+        </enter>
+        <transition target="off" value="switch_off"/>
+    </state>
+    <state value="off" name="off">
+        <transition target="on" value="switch_on"/>
+    </state>
+</state-machine>

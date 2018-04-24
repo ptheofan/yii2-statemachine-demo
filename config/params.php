@@ -3,7 +3,7 @@
 return [
     'adminEmail' => 'admin@example.com',
     'graphviz' => [
-        'binary' => '/usr/bin/dot',
+        'binary' => 'dot',
         'args' => ['-Tsvg'],
     ],
 ];
